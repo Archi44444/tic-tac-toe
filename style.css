@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: purple;
+    color: white;
+    height: 65px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    font-family: "DM Sans", sans-serif;
+
+}
+
+nav ul{
+    list-style-type: none;
+}
+.gameContainer{
+    background-color: black;
+    color: white;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-top: 50px;
+    
+}
+.container{
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family: "DM Sans", sans-serif;
+    position: relative;
+}
+.box{
+    border: 2px solid white;
+    color: aliceblue;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: darkmagenta;
+}
+.info{
+    font-size: 25px;
+}
+.gameInfo{
+    padding: 0 34px;
+    font-family: "Lilita One", sans-serif;
+}
+.gameInfo h1{
+    font-size: 2.5rem;
+}
+.imgbox img{
+    
+    width: 0;
+    transition: width 1s ease-in-out;
+
+}
+
+.br-0{
+    border-right: 0;
+
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+
+}
+.bb-0{
+    border-bottom: 0;
+}
+#reset{
+    margin: 0 23px;
+    padding: 1px 8px;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: "Lilita One", sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+
+}
+.line{
+    background-color: white;
+    height: 3px;
+    width: 40px;
+    position: absolute;
+    background-color: red;
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 950px) {
+    .gameContainer{
+        
+    flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container{
+        
+        grid-template-rows: repeat(3,20vw);
+        grid-template-columns: repeat(3,20vw);
+    }
+}
